@@ -93,16 +93,17 @@ static int cmd_info(char *args)
 	return 0;
 }
 
-/*static int cmd_x(char *args)
+static int cmd_x(char *args)
 {
 	char *arg;
-	int i;
-	arg=atrtok(NULL," ");
-	i=atoi(arg);
+	int n,i;
+	arg=strtok(args," ");
+	n=atoi(arg);
 	arg=strtok(NULL," ");
+	i=atoi(arg);
+	swaddr_read(i,n);
 	return 0;
 }
-*/
 
 static struct {
 	char *name;
@@ -114,6 +115,7 @@ static struct {
 	{ "q", "Exit NEMU", cmd_q },
 	{ "si","Single step", cmd_si },
 	{ "info", "Print state", cmd_info},
+	{ "x", "Scan the address", cmd_x},
 	/* TODO: Add more commands */
 
 };
