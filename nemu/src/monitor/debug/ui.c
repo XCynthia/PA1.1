@@ -86,9 +86,9 @@ static int cmd_info(char *args)
 	{
 		for(i=0;i<8;i++)
 		{
-			printf("%s\t%x\t%d\n",a[i],cpu.gpr[i]._32,cpu.gpr[i]._32);
+			printf("%s   %x   %d\n",a[i],cpu.gpr[i]._32,cpu.gpr[i]._32);
 		}
-    	printf("eip\t%x\t%d\n",cpu.eip,cpu.eip);
+    	printf("eip    %x   %d\n",cpu.eip,cpu.eip);
 	}
 	return 0;
 }
@@ -100,7 +100,7 @@ static int cmd_info(char *args)
 	arg=atrtok(NULL," ");
 	i=atoi(arg);
 	arg=strtok(NULL," ");
-	
+	return 0;
 }
 */
 
