@@ -73,6 +73,31 @@ static int cmd_si(char *args)
 	return 0;
 }
 
+/*static int cmd_info(char *args)
+{
+	char *arg =strtok (NULL , " ");
+	if(arg == NULL)
+	{
+		printf("Error!\n");
+	}
+	else if(strcmp(arg,"r")==0)
+	{
+		printf("%c,    %x,    %d\n",cpu.gpr[8]._32,cpu.gpr[8]._32,cpu.gpr[8]._32);
+    	printf("%c,    %x,    %d\n",cpu.eip,cpu.eip,cpu.eip);
+	}
+	return 0;
+}
+static int cmd_x(char *args)
+{
+	char *arg;
+	int i;
+	arg=atrtok(NULL," ");
+	i=atoi(arg);
+	arg=strtok(NULL," ");
+	
+}
+*/
+
 static struct {
 	char *name;
 	char *description;
@@ -82,7 +107,7 @@ static struct {
 	{ "c", "Continue the execution of the program", cmd_c },
 	{ "q", "Exit NEMU", cmd_q },
 	{ "si","Single step", cmd_si },
-
+//	{ "info", "Print state", cmd_info},
 	/* TODO: Add more commands */
 
 };
