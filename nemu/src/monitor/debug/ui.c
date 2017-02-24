@@ -42,7 +42,7 @@ static int cmd_si(char *args)
 {
 	char *arg = strtok ( NULL," " );
 	int i =atoi(arg);
-	if(i==0)
+	if(i==0||arg == NULL)
 	{
 		cpu_exec(1);
 	}
