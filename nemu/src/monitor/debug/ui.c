@@ -96,12 +96,12 @@ static int cmd_info(char *args)
 static int cmd_x(char *args)
 {
 	char *arg;
-	int n,i;
+	int n,address;
 	arg=strtok(args," ");
 	n=atoi(arg);
 	arg=strtok(NULL," ");
-	i=atoi(arg);
-	swaddr_read(i,n);
+	address=atoi(arg);
+	swaddr_read(address,n);
 	return 0;
 }
 
