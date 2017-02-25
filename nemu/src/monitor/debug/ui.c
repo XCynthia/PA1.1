@@ -86,9 +86,9 @@ static int cmd_info(char *args)
 	{
 		for(i=0;i<8;i++)
 		{
-			printf("%s   %x   %d\n",a[i],cpu.gpr[i]._32,cpu.gpr[i]._32);
+			printf("%s\t%0x\t%d\n",a[i],cpu.gpr[i]._32,cpu.gpr[i]._32);
 		}
-    	printf("eip    %x   %d\n",cpu.eip,cpu.eip);
+    	printf("eip\t%0x\t%d\n",cpu.eip,cpu.eip);
 	}
 	return 0;
 }
