@@ -95,13 +95,29 @@ static int cmd_info(char *args)
 
 static int cmd_x(char *args)
 {
-	char *arg;
-	int n,address;
-	arg=strtok(args," ");
-	n=atoi(arg);
-	arg=strtok(NULL," ");
-	address=atoi(arg);
-	swaddr_read(address,n);
+	char *arg=strtok(NULL," ");
+	int  n=atoi(arg);
+	char *address=strtok(NULL," ");
+	int  addr =strtol(address ,NULL ,16);
+	int i,j;
+	if (args == NULL || address == NULL || arg == NULL)
+	{
+		printf("ERROR!\n");
+	}
+	else
+	{
+		for(j=0;j<n;j++)
+		{
+			printf("%08x\t", addr);        //print address
+			
+			for(i=0;i<4;i++)
+			{
+				printf("%02x\t",swaddr_read(addr,1));
+				addr++;
+			}
+			printf("\n");
+		}
+	}
 	return 0;
 }
 
