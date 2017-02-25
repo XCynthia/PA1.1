@@ -106,6 +106,8 @@ static int cmd_x(char *args)
 	}
 	else
 	{
+		printf("dump memory start address:%0x\tlen:%d\n",addr,n);
+		printf("\n");
 		for(j=0;j<n;j++)
 		{
 			printf("%08x\t", addr);        //print address
